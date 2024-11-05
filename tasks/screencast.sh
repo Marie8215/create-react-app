@@ -11,10 +11,6 @@
 set -e
 
 printf '\e[32m%s\e[m' "λ "
-echo "npx create-react-app my-app" | pv -qL $[10+(-2 + RANDOM%5)]
-npx create-react-app my-app
-
-printf '\e[32m%s\e[m' "λ "
 sleep 1
 echo "cd my-app" | pv -qL $[10+(-2 + RANDOM%5)]
 cd my-app

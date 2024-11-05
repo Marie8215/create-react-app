@@ -92,10 +92,7 @@ Object.keys(packagePathsByName).forEach(name => {
 });
 console.log('Replaced all local dependencies for testing.');
 console.log('Do not edit any package.json while this task is running.');
-// ghkhjgiyu
-// Finally, pack react-scripts.
-// Don't redirect stdio as we want to capture the output that will be returned
-// from execSync(). In this case it will be the .tgz filename.
+
 const scriptsFileName = cp
   .execSync(`npm pack`, { cwd: path.join(packagesDir, 'react-scripts') })
   .toString()
